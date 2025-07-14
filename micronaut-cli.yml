@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: br.com.corps
+testFramework: junit
+sourceLanguage: java
+buildTool: maven
+features: [app-name, http-client-test, http-server-jdk, jackson-databind, java, java-application, junit, logback, lombok, maven, maven-enforcer-plugin, micronaut-aot, micronaut-http-validation, properties, readme, shade, static-resources]

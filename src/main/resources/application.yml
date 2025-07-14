@@ -1,0 +1,20 @@
+sdui:
+  json-path: classpath:sdui-plugins.json
+jackson:
+  serialization:
+    indentOutput: true
+
+micronaut:
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /swagger/**
+      swagger-ui:
+        paths: classpath:META-INF/swagger/views/swagger-ui
+        mapping: /swagger-ui/**
+openapi:
+  enabled: true
+  views:
+    swagger:
+      enabled: true

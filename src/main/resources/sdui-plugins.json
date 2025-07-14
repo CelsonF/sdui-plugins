@@ -1,0 +1,86 @@
+{
+  "type": "container",
+  "feature": "mastercard-dashboard",
+  "children": [
+    {
+      "type": "card-benefits-plugin",
+      "feature": "mastercard-benefits",
+      "modifier": {
+        "padding": "16dp",
+        "margin": "12dp",
+        "alignment": "center"
+      },
+      "style": {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": "8dp",
+        "shadow": true,
+        "textColor": "#333333",
+        "fontFamily": "Roboto"
+      },
+      "benefits": [
+        {
+          "profile": "Black",
+          "benefits": [
+            "Acesso ilimitado a salas VIP em aeroportos (LoungeKey)",
+            "Serviço de concierge 24h",
+            "MasterSeguro de Viagem completo",
+            "Seguro para veículos alugados",
+            "Proteção contra roubo em caixas eletrônicos",
+            "Assistência global de emergência",
+            "Seguro proteção de compras",
+            "Garantia estendida original",
+            "Isenção de rolha em restaurantes parceiros",
+            "Programa Mastercard Surpreenda com benefícios exclusivos"
+          ]
+        },
+        {
+          "profile": "Gold",
+          "benefits": [
+            "Garantia estendida original",
+            "Seguro de proteção de preço",
+            "Seguro proteção de compras",
+            "Assistência para perda ou roubo do cartão",
+            "MasterSeguro de Viagem básico",
+            "Programa Mastercard Surpreenda",
+            "Ofertas e descontos em parceiros"
+          ]
+        },
+        {
+          "profile": "Platinum",
+          "benefits": [
+            "Seguro proteção de compras",
+            "Garantia estendida original",
+            "Seguro para veículos alugados",
+            "Assistência global de emergência",
+            "Serviço de concierge Mastercard",
+            "MasterSeguro de Viagem",
+            "Proteção contra roubo em caixas eletrônicos",
+            "Acesso a ofertas e promoções exclusivas",
+            "Isenção de rolha em restaurantes parceiros",
+            "Participação no programa Mastercard Surpreenda"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "points-summary-plugin",
+      "feature": "loyalty-points",
+      "modifier": {
+        "padding": "16dp",
+        "margin": "12dp",
+        "alignment": "center"
+      },
+      "style": {
+        "backgroundColor": "#EFEFEF",
+        "textColor": "#222222",
+        "fontWeight": "bold",
+        "borderRadius": "6dp"
+      },
+      "points": {
+        "total": 12450,
+        "lastUpdated": "2025-07-14T15:32:00Z",
+        "currency": "pontos"
+      }
+    }
+  ]
+}
