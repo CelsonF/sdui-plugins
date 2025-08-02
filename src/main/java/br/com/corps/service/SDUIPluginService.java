@@ -10,7 +10,6 @@ import jakarta.annotation.PostConstruct;
 import jakarta.inject.Singleton;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
-import lombok.Value;
 
 import java.io.InputStream;
 import java.util.List;
