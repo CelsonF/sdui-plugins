@@ -1,0 +1,69 @@
+{
+  "type": "container",
+  "feature": "mastercard-dashboard",
+  "children": [
+    {
+      "type": "card-benefits-plugin",
+      "feature": "mastercard-benefits",
+      "modifier": {
+        "padding": "16dp",
+        "margin": "12dp",
+        "alignment": "center"
+      },
+      "style": {
+        "backgroundColor": "#000000",
+        "borderRadius": "8dp",
+        "shadow": true,
+        "textColor": "#FFFFFF",
+        "fontFamily": "Roboto"
+      },
+      "benefits": [
+        {
+          "profile": "Black",
+          "benefits": [
+            {
+              "text": "Acesso ilimitado a salas VIP em aeroportos (LoungeKey)",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/airport-lounge.svg"
+            },
+            {
+              "text": "Serviço de concierge 24h",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/concierge.svg"
+            },
+            {
+              "text": "MasterSeguro de Viagem completo",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/travel-insurance.svg"
+            },
+            {
+              "text": "Seguro para veículos alugados",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/car-rental.svg"
+            },
+            {
+              "text": "Proteção contra roubo em caixas eletrônicos",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/atm-protection.svg"
+            },
+            {
+              "text": "Assistência global de emergência",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/emergency.svg"
+            },
+            {
+              "text": "Seguro proteção de compras",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/purchase-protection.svg"
+            },
+            {
+              "text": "Garantia estendida original",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/warranty.svg"
+            },
+            {
+              "text": "Isenção de rolha em restaurantes parceiros",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/restaurant.svg"
+            },
+            {
+              "text": "Programa Mastercard Surpreenda com benefícios exclusivos",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/rewards.svg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

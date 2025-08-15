@@ -1,0 +1,57 @@
+{
+  "type": "container",
+  "feature": "mastercard-dashboard",
+  "children": [
+    {
+      "type": "card-benefits-plugin",
+      "feature": "mastercard-benefits",
+      "modifier": {
+        "padding": "16dp",
+        "margin": "12dp",
+        "alignment": "center"
+      },
+      "style": {
+        "backgroundColor": "#D4AF37",
+        "borderRadius": "8dp",
+        "shadow": true,
+        "textColor": "#333333",
+        "fontFamily": "Roboto"
+      },
+      "benefits": [
+        {
+          "profile": "Gold",
+          "benefits": [
+            {
+              "text": "Garantía extendida original",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/warranty.svg"
+            },
+            {
+              "text": "Seguro de protección de precio",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/price-protection.svg"
+            },
+            {
+              "text": "Seguro de protección de compras",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/purchase-protection.svg"
+            },
+            {
+              "text": "Asistencia por pérdida o robo de tarjeta",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/card-protection.svg"
+            },
+            {
+              "text": "MasterSeguro de Viaje básico",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/travel-insurance-basic.svg"
+            },
+            {
+              "text": "Programa Mastercard Sorprende",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/rewards.svg"
+            },
+            {
+              "text": "Ofertas y descuentos en establecimientos asociados",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/discounts.svg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

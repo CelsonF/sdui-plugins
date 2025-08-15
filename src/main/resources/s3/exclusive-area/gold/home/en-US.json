@@ -1,0 +1,57 @@
+{
+  "type": "container",
+  "feature": "mastercard-dashboard",
+  "children": [
+    {
+      "type": "card-benefits-plugin",
+      "feature": "mastercard-benefits",
+      "modifier": {
+        "padding": "16dp",
+        "margin": "12dp",
+        "alignment": "center"
+      },
+      "style": {
+        "backgroundColor": "#D4AF37",
+        "borderRadius": "8dp",
+        "shadow": true,
+        "textColor": "#333333",
+        "fontFamily": "Roboto"
+      },
+      "benefits": [
+        {
+          "profile": "Gold",
+          "benefits": [
+            {
+              "text": "Original extended warranty",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/warranty.svg"
+            },
+            {
+              "text": "Price protection insurance",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/price-protection.svg"
+            },
+            {
+              "text": "Purchase protection insurance",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/purchase-protection.svg"
+            },
+            {
+              "text": "Lost or stolen card assistance",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/card-protection.svg"
+            },
+            {
+              "text": "Basic MasterTravel Insurance",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/travel-insurance-basic.svg"
+            },
+            {
+              "text": "Mastercard Surprise program",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/rewards.svg"
+            },
+            {
+              "text": "Partner offers and discounts",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/discounts.svg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

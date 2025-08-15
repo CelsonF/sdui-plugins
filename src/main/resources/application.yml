@@ -4,6 +4,14 @@ jackson:
   serialization:
     indentOutput: true
 
+app:
+  language:
+    defaultLanguage: pt-BR
+    supportedLanguages:
+      - pt-BR
+      - en-US
+      - es-ES
+
 micronaut:
   router:
     static-resources:

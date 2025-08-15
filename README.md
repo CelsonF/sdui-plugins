@@ -6,6 +6,75 @@
 - [Micronaut Guides](https://guides.micronaut.io/index.html)
 ---
 
+# SDUI Plugins API
+
+## Card Benefits API
+
+The Card Benefits API provides access to card-specific benefits with multilingual support.
+
+### Endpoints
+
+#### Get Card Benefits
+
+```
+GET /cards/{profile}/benefits
+```
+
+Retrieves benefits for a specific card profile (black, gold, platinum) in the requested language.
+
+**Path Parameters:**
+- `profile` - Card profile (black, gold, platinum)
+
+**Headers:**
+- `Accept-Language` - Preferred language code (default: pt-BR)
+
+**Supported Languages:**
+- Portuguese (pt-BR) - Default
+- English (en-US)
+- Spanish (es-ES)
+
+**Example Request:**
+```
+GET /cards/black/benefits
+Accept-Language: en-US
+```
+
+**Example Response:**
+```json
+{
+  "status": "success",
+  "message": "Data retrieved successfully",
+  "language": "en-US",
+  "data": [
+    {
+      "feature": "mastercard-benefits",
+      "title": "Mastercard Black Benefits",
+      "benefitGroups": [
+        {
+          "title": "Travel",
+          "benefits": [
+            {
+              "text": "Access to VIP lounges",
+              "icon": "https://mastercard.com/assets/icons/airport-lounge.png"
+            },
+            {
+              "text": "Travel insurance",
+              "icon": "https://mastercard.com/assets/icons/insurance.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Language Fallback
+
+If an unsupported language is requested, the API will automatically fall back to the default language (pt-BR).
+
+---
+
 - [Micronaut Maven Plugin documentation](https://micronaut-projects.github.io/micronaut-maven-plugin/latest/)
 ## Feature maven-enforcer-plugin documentation
 
@@ -29,5 +98,3 @@
 ## Feature micronaut-aot documentation
 
 - [Micronaut AOT documentation](https://micronaut-projects.github.io/micronaut-aot/latest/guide/)
-
-

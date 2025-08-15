@@ -21,6 +21,7 @@
     <micronaut.aot.enabled>false</micronaut.aot.enabled>
     <micronaut.aot.packageName>br.com.corps.aot.generated</micronaut.aot.packageName>
     <exec.mainClass>br.com.corps.Application</exec.mainClass>
+    <snakeyaml.version>2.2</snakeyaml.version>
   </properties>
 
   <repositories>
@@ -39,6 +40,7 @@
     <dependency>
         <groupId>org.yaml</groupId>
         <artifactId>snakeyaml</artifactId>
+        <version>${snakeyaml.version}</version>
         <scope>runtime</scope>
       </dependency>
     <dependency>

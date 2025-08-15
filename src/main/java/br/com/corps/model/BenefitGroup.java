@@ -10,5 +10,5 @@ import java.util.List;
 public class BenefitGroup {
 
     private String profile;
-    private List<String> benefits;
+    private List<Benefit> benefits;
 }

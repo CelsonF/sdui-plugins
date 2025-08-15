@@ -1,0 +1,69 @@
+{
+  "type": "container",
+  "feature": "mastercard-dashboard",
+  "children": [
+    {
+      "type": "card-benefits-plugin",
+      "feature": "mastercard-benefits",
+      "modifier": {
+        "padding": "16dp",
+        "margin": "12dp",
+        "alignment": "center"
+      },
+      "style": {
+        "backgroundColor": "#000000",
+        "borderRadius": "8dp",
+        "shadow": true,
+        "textColor": "#FFFFFF",
+        "fontFamily": "Roboto"
+      },
+      "benefits": [
+        {
+          "profile": "Black",
+          "benefits": [
+            {
+              "text": "Acceso ilimitado a salas VIP en aeropuertos (LoungeKey)",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/airport-lounge.svg"
+            },
+            {
+              "text": "Servicio de conserjería 24 horas",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/concierge.svg"
+            },
+            {
+              "text": "MasterSeguro de Viaje completo",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/travel-insurance.svg"
+            },
+            {
+              "text": "Seguro para vehículos alquilados",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/car-rental.svg"
+            },
+            {
+              "text": "Protección contra robo en cajeros automáticos",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/atm-protection.svg"
+            },
+            {
+              "text": "Asistencia global de emergencia",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/emergency.svg"
+            },
+            {
+              "text": "Seguro de protección de compras",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/purchase-protection.svg"
+            },
+            {
+              "text": "Garantía extendida original",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/warranty.svg"
+            },
+            {
+              "text": "Exención de descorche en restaurantes asociados",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/restaurant.svg"
+            },
+            {
+              "text": "Programa Mastercard Sorprende con beneficios exclusivos",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/rewards.svg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

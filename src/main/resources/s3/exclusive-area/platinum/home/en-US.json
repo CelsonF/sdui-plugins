@@ -1,0 +1,69 @@
+{
+  "type": "container",
+  "feature": "mastercard-dashboard",
+  "children": [
+    {
+      "type": "card-benefits-plugin",
+      "feature": "mastercard-benefits",
+      "modifier": {
+        "padding": "16dp",
+        "margin": "12dp",
+        "alignment": "center"
+      },
+      "style": {
+        "backgroundColor": "#E5E4E2",
+        "borderRadius": "8dp",
+        "shadow": true,
+        "textColor": "#333333",
+        "fontFamily": "Roboto"
+      },
+      "benefits": [
+        {
+          "profile": "Platinum",
+          "benefits": [
+            {
+              "text": "Purchase protection insurance",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/purchase-protection.svg"
+            },
+            {
+              "text": "Original extended warranty",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/warranty.svg"
+            },
+            {
+              "text": "Rental vehicle insurance",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/car-rental.svg"
+            },
+            {
+              "text": "Global emergency assistance",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/emergency.svg"
+            },
+            {
+              "text": "Mastercard concierge service",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/concierge.svg"
+            },
+            {
+              "text": "MasterTravel Insurance",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/travel-insurance.svg"
+            },
+            {
+              "text": "ATM theft protection",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/atm-protection.svg"
+            },
+            {
+              "text": "Access to exclusive offers and promotions",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/offers.svg"
+            },
+            {
+              "text": "Corkage fee waiver at partner restaurants",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/restaurant.svg"
+            },
+            {
+              "text": "Participation in the Mastercard Surprise program",
+              "icon": "https://cdn.mastercard.com/content/assets/icons/rewards.svg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
