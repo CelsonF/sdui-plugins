@@ -3,6 +3,7 @@ package br.com.corps.controller;
 import br.com.corps.config.LanguageConfig;
 import br.com.corps.model.Plugin;
 import br.com.corps.service.S3ResourceService;
+import br.com.corps.service.TranslationService;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
@@ -26,11 +27,15 @@ public class CardBenefitsController {
 
     private final S3ResourceService s3ResourceService;
     private final LanguageConfig languageConfig;
+    private final TranslationService translationService;
 
     @Inject
-    public CardBenefitsController(S3ResourceService s3ResourceService, LanguageConfig languageConfig) {
+    public CardBenefitsController(S3ResourceService s3ResourceService, 
+                                 LanguageConfig languageConfig,
+                                 TranslationService translationService) {
         this.s3ResourceService = s3ResourceService;
         this.languageConfig = languageConfig;
+        this.translationService = translationService;
     }
 
     /**
@@ -57,8 +62,11 @@ public class CardBenefitsController {
             );
         }
         
+        // Apply translations using the key-based translation service
+        List<Plugin> translatedPlugins = translationService.translatePlugins(plugins, profile, normalizedLanguage);
+        
         return HttpResponse.ok(
-            br.com.corps.model.ApiResponse.success(plugins, normalizedLanguage)
+            br.com.corps.model.ApiResponse.success(translatedPlugins, normalizedLanguage)
         );
     }
 }

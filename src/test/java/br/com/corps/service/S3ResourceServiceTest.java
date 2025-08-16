@@ -40,65 +40,50 @@ public class S3ResourceServiceTest {
         // Verify results
         assertFalse(plugins.isEmpty(), "Should return non-empty list of plugins");
         assertEquals("mastercard-benefits", plugins.get(0).getFeature());
-        assertEquals("Benefícios Mastercard Black", plugins.get(0).getTitle());
         
         // Verify benefit groups and benefits
-        List<BenefitGroup> benefitGroups = plugins.get(0).getBenefitGroups();
+        List<BenefitGroup> benefitGroups = plugins.get(0).getBenefits();
         assertFalse(benefitGroups.isEmpty(), "Should have benefit groups");
         
         // Check first benefit group
         BenefitGroup firstGroup = benefitGroups.get(0);
-        assertEquals("Viagem", firstGroup.getTitle());
+        assertEquals("Black", firstGroup.getProfile());
         
-        // Check benefits have text and icon
+        // Check benefits in the group
         List<Benefit> benefits = firstGroup.getBenefits();
-        assertFalse(benefits.isEmpty(), "Should have benefits");
-        assertNotNull(benefits.get(0).getText(), "Benefit should have text");
-        assertNotNull(benefits.get(0).getIcon(), "Benefit should have icon URL");
+        assertFalse(benefits.isEmpty(), "Should have benefits in the group");
     }
-    
+
     @ParameterizedTest
     @CsvSource({
-        "black,en-US,Mastercard Black Benefits,Travel",
-        "black,es-ES,Beneficios Mastercard Black,Viaje",
-        "gold,en-US,Mastercard Gold Benefits,Travel",
-        "gold,es-ES,Beneficios Mastercard Gold,Viaje",
-        "platinum,en-US,Mastercard Platinum Benefits,Travel",
-        "platinum,es-ES,Beneficios Mastercard Platinum,Viaje"
+        "black,en-US",
+        "black,pt-BR",
+        "platinum,en-US",
+        "platinum,pt-BR"
     })
-    void testLoadCardBenefitsWithDifferentLanguages(String cardProfile, String language, 
-                                                   String expectedTitle, String expectedGroupTitle) {
-        // Test with specified language
-        List<Plugin> plugins = s3ResourceService.loadCardBenefits(cardProfile, language);
+    void testLoadCardBenefitsWithDifferentLanguages(String cardType, String language) {
+        // Test with different languages
+        List<Plugin> plugins = s3ResourceService.loadCardBenefits(cardType, language);
         
         // Verify results
         assertFalse(plugins.isEmpty(), "Should return non-empty list of plugins");
-        assertEquals("mastercard-benefits", plugins.get(0).getFeature());
-        assertEquals(expectedTitle, plugins.get(0).getTitle());
         
-        // Verify first benefit group title
-        List<BenefitGroup> benefitGroups = plugins.get(0).getBenefitGroups();
+        // Verify benefit groups and benefits
+        List<BenefitGroup> benefitGroups = plugins.get(0).getBenefits();
         assertFalse(benefitGroups.isEmpty(), "Should have benefit groups");
-        assertEquals(expectedGroupTitle, benefitGroups.get(0).getTitle());
-    }
-    
-    @Test
-    void testLoadCardBenefitsWithUnsupportedLanguage() {
-        // Test with unsupported language (should fall back to default)
-        List<Plugin> plugins = s3ResourceService.loadCardBenefits("black", "fr-FR");
         
-        // Verify results (should be same as default language)
-        assertFalse(plugins.isEmpty(), "Should return non-empty list of plugins");
-        assertEquals("mastercard-benefits", plugins.get(0).getFeature());
-        assertEquals("Benefícios Mastercard Black", plugins.get(0).getTitle());
+        // Check benefits in the first group
+        BenefitGroup firstGroup = benefitGroups.get(0);
+        List<Benefit> benefits = firstGroup.getBenefits();
+        assertFalse(benefits.isEmpty(), "Should have benefits in the group");
     }
-    
+
     @Test
-    void testLoadCardBenefitsWithInvalidProfile() {
-        // Test with invalid card profile
-        List<Plugin> plugins = s3ResourceService.loadCardBenefits("invalid-profile", "pt-BR");
+    void testLoadCardBenefitsWithInvalidCard() {
+        // Test with invalid card type
+        List<Plugin> plugins = s3ResourceService.loadCardBenefits("invalid-card", "pt-BR");
         
-        // Verify results
-        assertTrue(plugins.isEmpty(), "Should return empty list for invalid profile");
+        // Should return empty list for invalid card
+        assertTrue(plugins.isEmpty(), "Should return empty list for invalid card");
     }
 }

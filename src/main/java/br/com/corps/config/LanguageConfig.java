@@ -2,7 +2,8 @@ package br.com.corps.config;
 
 import io.micronaut.context.annotation.ConfigurationProperties;
 import io.micronaut.context.annotation.Context;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +13,8 @@ import java.util.List;
  */
 @ConfigurationProperties("app.language")
 @Context
-@Data
+@Getter
+@NoArgsConstructor
 public class LanguageConfig {
 
     /**
@@ -36,39 +38,29 @@ public class LanguageConfig {
     }
 
     /**
-     * Get the default language
-     *
-     * @return the default language code
-     */
-    public String getDefaultLanguage() {
-        return defaultLanguage;
-    }
-
-    /**
-     * Normalize a language code
+     * Normalize a language code to a supported format
      *
      * @param language the language code to normalize
-     * @return the normalized language code
+     * @return the normalized language code, or the default language if not supported
      */
     public String normalizeLanguage(String language) {
-        if (language == null || language.isEmpty()) {
+        if (language == null) {
             return defaultLanguage;
         }
-
-        // Handle common variations
-        if (language.equalsIgnoreCase("en")) {
-            return "en-US";
-        } else if (language.equalsIgnoreCase("es")) {
-            return "es-ES";
-        } else if (language.equalsIgnoreCase("pt")) {
-            return "pt-BR";
-        }
-
-        // Check if the language is supported
+        
+        // Check if the language is already in the correct format
         if (isSupported(language)) {
             return language;
         }
-
+        
+        // Try to match with supported languages
+        for (String supported : supportedLanguages) {
+            if (supported.toLowerCase().startsWith(language.toLowerCase())) {
+                return supported;
+            }
+        }
+        
+        // Return default language if no match found
         return defaultLanguage;
     }
 }

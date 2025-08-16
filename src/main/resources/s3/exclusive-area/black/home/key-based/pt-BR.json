@@ -1,0 +1,33 @@
+{
+  "type": "exclusive-area",
+  "feature": "black-card",
+  "children": [
+    {
+      "type": "benefits-section",
+      "feature": "black-benefits",
+      "benefits": [
+        {
+          "text": "key:unlimited_access_vip_lounges",
+          "icon": "https://cdn.mastercard.com/content/assets/icons/airport.svg"
+        },
+        {
+          "text": "key:travel_insurance",
+          "icon": "https://cdn.mastercard.com/content/assets/icons/insurance.svg"
+        },
+        {
+          "text": "key:concierge_service",
+          "icon": "https://cdn.mastercard.com/content/assets/icons/concierge.svg"
+        },
+        {
+          "text": "key:mastercard_rewards",
+          "icon": "https://cdn.mastercard.com/content/assets/icons/rewards.svg"
+        },
+        {
+          "text": "key:cashback_purchases",
+          "icon": "https://cdn.mastercard.com/content/assets/icons/cashback.svg"
+        }
+      ],
+      "title": "key:benefits_card_title"
+    }
+  ]
+}
